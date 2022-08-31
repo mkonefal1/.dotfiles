@@ -1,0 +1,90 @@
+{
+	"name": "code-spell-checker-polish",
+	"description": "Polish dictionary extension for VS Code.",
+	"version": "2.0.0",
+	"displayName": "Polish - Code Spell Checker",
+	"icon": "images/SpellCheck.png",
+	"preview": false,
+	"private": true,
+	"publisher": "streetsidesoftware",
+	"license": "GPL-3.0-or-later",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"sponsor": {
+		"url": "https://opencollective.com/code-spell-checker"
+	},
+	"extensionKind": [
+		"workspace"
+	],
+	"categories": [
+		"Linters",
+		"Other"
+	],
+	"keywords": [
+		"Polish",
+		"VS Code Extension",
+		"Spelling Checker",
+		"dictionary",
+		"spelling"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"qna": "marketplace",
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "cSpellExt_polish.enable",
+				"title": "Enable Polish Spell Checker Dictionary"
+			},
+			{
+				"command": "cSpellExt_polish.disable",
+				"title": "Disable Polish Spell Checker Dictionary"
+			},
+			{
+				"command": "cSpellExt_polish.enableWorkspace",
+				"title": "Enable Polish Spell Checker Dictionary in Workspace"
+			},
+			{
+				"command": "cSpellExt_polish.disableWorkspace",
+				"title": "Disable Polish Spell Checker Dictionary in Workspace"
+			}
+		]
+	},
+	"extensionDependencies": [
+		"streetsidesoftware.code-spell-checker"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/streetsidesoftware/vscode-cspell-dict-extensions"
+	},
+	"bugs": {
+		"url": "https://github.com/streetsidesoftware/vscode-cspell-dict-extensions/issues"
+	},
+	"scripts": {
+		"clean": "rimraf out",
+		"clean-build": "npm run clean && npm run build",
+		"publish-extension": "vsce publish",
+		"pack-extension": "vsce package",
+		"vscode:prepublish": "npm run build",
+		"build": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"test": "node ../../node_modules/vscode/bin/test"
+	},
+	"dependencies": {
+		"@cspell/dict-pl_pl": "^2.0.0"
+	},
+	"__metadata": {
+		"id": "36ec271c-0998-4a9a-bdbf-0ed6aae933f4",
+		"publisherId": "67600ca7-88fb-4104-9f7e-dd51c00facf2",
+		"publisherDisplayName": "Street Side Software",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1660397291329
+	}
+}
